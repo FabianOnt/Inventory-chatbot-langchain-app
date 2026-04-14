@@ -1,0 +1,7 @@
+{
+    "database": "chatbot1",
+    "host": "localhost",
+    "port": 3306,
+    "user": "chatbot_api",
+    "password": "secretpassword1234"
+}

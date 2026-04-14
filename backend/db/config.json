@@ -1,0 +1,12 @@
+{
+    "database": "chatbot1",
+    "host": "localhost",
+    "port": 3306,
+    "admin_user": "root",
+    "admin_password": "@3E.rf57_2&Au6",
+    "api_user": "chatbot_api",
+    "api_password": "secretpassword1234",
+    "app_admin_name": "The Real Admin",
+    "app_admin_user": "admin.app@example.com",
+    "app_admin_password": "secretpassword"
+}
