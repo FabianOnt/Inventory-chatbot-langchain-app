@@ -9,7 +9,7 @@ In this project I implement a local LLM-based chatbot with Langchain which is de
 
 The system is composed by a MySQL database and a Python REST API which is used by the AI-agent tool interface to gather the necessary data and execute specific operations.
 
-<img src="assets/cli-chat.png" width="500" />
+<img src="assets/CLI-chat.png" width="500" />
 
 ## Overview
 - Inventory system + CLI chatbot
