@@ -5,7 +5,7 @@ import json
 
 
 try:
-    with open("backend/db/config.json", "r") as file:
+    with open("db/config.json", "r") as file:
         DB_CONFIG: dict[str, Any] = json.load(file)
 except Exception as e:
     raise RuntimeError(f"Failed to load DB config: {e}")
@@ -69,8 +69,8 @@ def initialize_database():
     )
 
     files = [
-        ("backend/db/schema.sql", ";"),
-        ("backend/db/procedures.sql", "//")
+        ("db/schema.sql", ";"),
+        ("db/procedures.sql", "//")
     ]
 
     for filename, delimiter in files:
@@ -97,6 +97,12 @@ def initialize_database():
 
     api_user = DB_CONFIG['api_user']
     api_password = DB_CONFIG['api_password']
+
+    cursor.execute(
+        operation=f"""
+            DROP USER IF EXISTS '{api_user}'@'localhost'
+        """
+    )
 
     cursor.execute(
         operation=f"""
